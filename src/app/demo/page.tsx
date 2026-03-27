@@ -1,9 +1,5 @@
 "use server";
 
-
-export const dynamic = "force-dynamic";
-
-
 import sql from "~/db/client";
 import { revalidatePath } from "next/cache";
 
