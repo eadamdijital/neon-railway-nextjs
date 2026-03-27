@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build --turbopack",
+    "build_fix": "next build",
     "start": "next start",
     "lint": "eslint",
     "seed": "npx get-db -s init.sql -e .env.local -k DATABASE_URL -p NEXT_",
