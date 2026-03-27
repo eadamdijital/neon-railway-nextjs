@@ -63,7 +63,7 @@ export default async function DemoPage() {
 
   return (
     <div className="max-w-xl mx-auto p-6 space-y-6">
-      <h1 className="text-2xl font-semibold">Todos</h1>
+      <h1 className="text-2xl font-semibold">Todos!</h1>
 
       <form action={addTodo} className="grid gap-2">
         <input
