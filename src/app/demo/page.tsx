@@ -2,6 +2,7 @@
 
 
 // export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 
 import sql from "~/db/client";
@@ -15,12 +16,12 @@ export type Todo = {
   created_at: string;
 };
 
-/* async function getTodos(): Promise<Todo[]> {
+async function getTodos(): Promise<Todo[]> {
   const rows =
     await sql`SELECT id, title, description, is_completed, created_at FROM todos ORDER BY created_at DESC`;
   return rows as unknown as Todo[];
-} */
-import { unstable_noStore as noStore } from "next/cache";
+}
+/* import { unstable_noStore as noStore } from "next/cache";
 
 async function getTodos(): Promise<Todo[]> {
   noStore();
@@ -29,7 +30,7 @@ async function getTodos(): Promise<Todo[]> {
     await sql`SELECT id, title, description, is_completed, created_at FROM todos ORDER BY created_at DESC`;
 
   return rows as unknown as Todo[];
-}
+} */
 
 export default async function DemoPage() {
   async function addTodo(formData: FormData) {
