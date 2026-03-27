@@ -15,6 +15,11 @@ async function getTodos(): Promise<Todo[]> {
   const rows =
     await sql`SELECT id, title, description, is_completed, created_at FROM todos ORDER BY created_at DESC`;
   return rows as unknown as Todo[];
+
+
+  revalidatePath("/demo");
+
+
 }
 
 export default async function DemoPage() {
